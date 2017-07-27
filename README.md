@@ -5,11 +5,11 @@ Transfer Learning uses information gained by training of a model on one set of d
 
 This python script uses Keras module based on TensorFlow backend to train for categorization of CIFAR10 image dataset by using Transfer Learning. The script uses two models- first model trains for categorization of images in first 5 classes in the CIFAR10 dataset; the second (trans) model uses the information gained by the first model to train for categorization of images in the next 5 classes in CIFAR10.
 
-Dataset
+Dataset:
 
 The CIFAR10 dataset is a collection of 50000 32x32 coloured images belonging to one of 10 classes. 25000 images belong to first 5 classes - 0..4; the rest of 25000 to classes 5..9. 80% of these datasets were used for training under the respective model, while the other 20% was used for validation of the respective model.
 
-Models
+Models:
 
 The convolutional neural network for gaining information by training a model for first 5 classes is as follows:
 Layer 1. Convolutional layer with 32 5x5 kernels, expecting input of shape (32, 32, 3) and using relu as activation function.
@@ -27,8 +27,6 @@ Layer 7: Fully connected layer with 128 neurons, using relu as activation functi
 Layer 8. Fully connected layer with 10 neurons - acting as the final output classes.
 
 Result Summary:
-
-The output of the python script can be found in the results.txt file.
 
 The two models were trained on a CPU for just 10 epochs each.
 
